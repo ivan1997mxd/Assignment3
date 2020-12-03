@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/flowerListFragment">
+
+    <fragment
+        android:id="@+id/flowerListFragment"
+        android:name="sheridan.tongche.assignment3.ui.list.FlowerListFragment"
+        tools:layout="@layout/fragment_flower_list"
+        android:label="FlowerListFragment" >
+        <action
+            android:id="@+id/action_showDetail"
+            app:destination="@id/flowerDeatilFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/flowerDeatilFragment"
+        android:name="sheridan.tongche.assignment3.ui.detail.FlowerDetailFragment"
+        tools:layout="@layout/fragment_flower_detail"
+        android:label="FlowerDetailFragment" >
+        <argument
+            android:name="selectedProperty"
+            app:argType="sheridan.tongche.assignment3.domain.Flower"
+            />
+    </fragment>
+
+</navigation>
